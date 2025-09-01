@@ -1,0 +1,51 @@
+.background_content{
+  display: block;
+  min-height: 100vh;
+  min-width: none;
+  background-image: url('C:/Users/natad/AngularProj/my-portfolio-2/src/assets/spike.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: background-position 0.1s;
+}
+
+.welcomeText {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 20vh;
+}
+.intro_text.fade-in-text {
+  animation-delay: 2.5s;
+}
+
+#p_intro {
+  font-size: 1.5rem;
+  margin-top: 5vh;
+  color: white;
+}
+
+
+.fade-in-text {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .background_content{
+     display: block;
+    background-position: 72% 20%;
+    position: relative;
+  }
+  #p_intro{
+    font-size: 1rem;
+  }
+  .welcomeText{
+    margin-top: 10vh;
+  }
+    
+}

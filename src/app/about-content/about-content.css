@@ -1,0 +1,50 @@
+.background_content{
+  display: block;
+  min-height: 100vh;
+  min-width: none;
+  background-image: url('C:/Users/natad/AngularProj/my-portfolio-2/src/assets/spike2.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: background-position 0.1s;
+}
+
+.about_text1{
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 10vh;    
+  margin-left: 5rem;
+  text-align: start;
+}
+
+.fave_Items {
+    justify-content: center;
+    padding-left: 5rem;
+}
+
+#fave_img1:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  p {
+    font-size: 1.5rem;       
+    text-align: justify;
+    padding: 1rem;
+     border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    background-color: rgba(31, 30, 32, 0.781);  
+    color: rgb(255, 255, 255) !important;         
+  }
+
+ 
+  .about_text1 {
+    text-align: center;    
+    margin-left: 0;        
+    background-color: rgba(31, 30, 32, 0.781);  
+    color: rgb(255, 255, 255) !important;       
+    padding-bottom: 30px; 
+  }
+}

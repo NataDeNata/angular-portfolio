@@ -3,14 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { AboutContent } from './about-content/about-content';
+import { AppHomeContent } from './app-home-content/app-home-content';
+import { ContactContent } from './contact-content/contact-content';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    AboutContent,
+    AppHomeContent,
+    ContactContent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

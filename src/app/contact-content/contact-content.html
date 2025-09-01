@@ -1,0 +1,56 @@
+<div #bgContent class="background_content">
+    <div class="contactForm">
+          <form  [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <label>
+            Name:
+            <input formControlName="name" />
+            <span *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid">
+            Name is required (min 5 chars)
+            </span>
+        </label>
+
+        <label>
+            Email:
+            <input formControlName="email" type="email" />
+            <span *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid">
+            Enter a valid email
+            </span>
+        </label>
+
+        <label>
+            Message:
+            <textarea formControlName="message"></textarea>
+            <span *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid">
+            Message must be at least 10 characters
+            </span>
+        </label>
+
+        <button type="submit">Send</button>
+        </form>
+    </div>
+    <div class="contactInfo text-align-center">
+        
+        <br>
+     <!--Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Social buttons -->
+        <a href="https://www.facebook.com/natsnattyu" class="btn btn-primary me-2" target="_blank">
+        <i class="fab fa-facebook-f me-1"></i> Facebook
+        </a>
+        <br>
+        <a href="https://x.com/NatzyGamz?t=AtXIKw56KDNvanNZnEe_0w&s=07" class="btn btn-info text-black me-2" target="_blank">
+        <i class="fab fa-twitter me-1"></i> X
+        </a>
+         <br>
+        <a href="https://github.com/NataDeNata" class="btn btn-dark me-2" target="_blank">
+        <i class="fab fa-github me-1"></i> GitHub
+        </a>
+        <a href="https://www.instagram.com/natsdenata?igsh=MmR1NXI4dDQxdHY4" class="btn btn-danger" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i> Instagram
+        </a>
+
+    </div>
+    <br>
+      <h3 class="socials">Or Contact my Socials</h3>
+</div>
+
