@@ -3,8 +3,10 @@
   min-height: 100vh;
   min-width: none;
   background-image: url('C:/Users/natad/AngularProj/my-portfolio-2/src/assets/spike2.jpg');
-  background-size: cover;
+   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+   background-repeat: no-repeat;
   transition: background-position 0.1s;
 }
 
