@@ -29,6 +29,17 @@
         </a>
         </div>
 
+        <!-- Toggle Button for next section -->
+     <button class="seeMoreBtn btn btn-dark mt-4 fs-4" (click)="toggleSection(nextSection)">
+      {{ isSectionVisible ? 'Hide' : 'See Projects' }}
+    </button>
+    <!--Next Section-->
+    <div #nextSection class="next_section text-white p-5" [class.show]="isSectionVisible">
+      <h2>Current Projects</h2>
+    </div>
+
+
+
 
       <!--
         Flaticon Attribution

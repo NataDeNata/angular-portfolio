@@ -1,12 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-about-content',
-  standalone: false,
   templateUrl: './about-content.html',
-  styleUrl: './about-content.css'
+  styleUrls: ['./about-content.css'],
 })
 export class AboutContent {
   about_me = "This portfolio is made with ";
+  isSectionVisible = false;
 
+  @ViewChild('nextSection', { static: false }) nextSection?: ElementRef<HTMLElement>;
+
+    toggleSection(section: HTMLElement) {
+      this.isSectionVisible = !this.isSectionVisible;
+      if (this.isSectionVisible) {
+        // Wait a tick so CSS can apply `show` before scrolling
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 0);
+      }
+    }
 }

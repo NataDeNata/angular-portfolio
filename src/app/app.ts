@@ -1,6 +1,7 @@
 import { Component, signal, HostListener, AfterViewInit } from '@angular/core';
 import { Collapse } from 'bootstrap';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',

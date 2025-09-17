@@ -50,3 +50,19 @@
     padding-bottom: 30px; 
   }
 }
+.next_section {
+  opacity: 0;
+  transform: translateY(20px);
+  max-height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: opacity 300ms ease, transform 300ms ease, max-height 300ms ease;
+}
+
+.next_section.show {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 2000px; /* big enough for your content */
+  pointer-events: auto;
+}
+

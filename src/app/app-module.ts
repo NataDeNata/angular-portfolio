@@ -11,14 +11,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     App,
-    AboutContent,
     AppHomeContent,
     ContactContent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutContent
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
