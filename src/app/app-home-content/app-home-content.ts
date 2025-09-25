@@ -8,7 +8,7 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 })
 export class AppHomeContent {
       welcomeText = "Hi! I'm Nathan, an aspiring ";
-      intro_text = "Welcome to my Portfolio with Angular!";
+      intro_text = "Welcome to my Portfolio!";
       displayedText = '';
       private index = 0;
 

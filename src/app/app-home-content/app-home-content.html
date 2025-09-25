@@ -4,10 +4,10 @@
      <button style="width: 10rem; margin-top: 10vh;" class="btn btn-outline-light" (click)="showParagraph = !showParagraph">
       {{ showParagraph ? 'Hide Details' : 'Show Details' }}
     </button>
-    <p id="p_intro" *ngIf="showParagraph" [ngClass]="{'fade-in-text': showParagraph}">
-      I'm currently a student at the University of Baguio - Baguio City, Philippines. <br>
-      I'm pursuing a degree in Bachelor of Science in Computer Science. <br>
-      I love coding and learning new things. <br>
-      Feel free to explore and reach out if you'd like to connect!
-    </p>
+   <p id="p_intro" class="fade-text" [class.hidden]="!showParagraph">
+  I'm currently a student at the University of Baguio - Baguio City, Philippines. <br>
+  I'm pursuing a degree in Bachelor of Science in Computer Science. <br>
+  I love coding and learning new things. <br>
+  Feel free to explore and reach out if you'd like to connect!
+  </p>
 </div>

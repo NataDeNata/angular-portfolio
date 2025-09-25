@@ -1,8 +1,40 @@
 <div #bgContent class="background_content">
-  <h1 class="about_text1 text-white fade-in-text">{{about_me}} <span style="color: rgb(223, 12, 12);">Angular.</span></h1>
+  <h1 class="about_text1 text-white fade-in-text">{{about_me}} <span style="color: rgb(223, 12, 12);">Projects:</span></h1>
+  <hr style="color: rgb(247, 0, 0);
+  width: 70%;
+  height: 2px;
+  opacity: 1;
+  margin: 4rem auto 4rem auto; 
+  border: none;         
+  background-color: rgb(247, 0, 0);
+">
 
-  <div class="container">
-    <div class="row justify-content-center align-items-center">
+  <div class="container mt-4 text-center">
+      <div class="row justify-content-center align-items-center">   
+         <div class="col-12 col-md-6 text-center mb-4">
+            <a style="text-decoration: none;" href="https://natadenata.github.io/product-catalog/home" target="_blank" rel="noopener">
+              <img id="fave_img1" src="assets/productCat.png" alt="image" class="img-fluid" style="max-width: 100%; max-height: 80%;">
+              <h1 style="color: rgb(240, 5, 5);">A Product Catalog</h1>
+            </a>
+         </div>
+          <div class="col-12 col-md-6 text-center mb-4">
+            <a style="text-decoration: none;" href="https://natadenata.github.io/angular-portfolio" target="_blank" rel="noopener">
+              <img id="fave_img1" src="assets/angular.png" alt="image" class="img-fluid" style="max-width: 100%;">
+              <h1 style="color: rgb(240, 5, 5);">Angular Portfolio</h1>
+            </a>
+          </div>
+      </div>
+
+
+
+        <!-- Toggle Button for next section -->
+     <button class="seeMoreBtn btn btn-dark mt-4 fs-4"  (click)="toggleSection(nextSection)">
+      {{ isSectionVisible ? 'Hide' : 'More About Me' }}
+    </button>
+    <!--Next Section-->
+    <div #nextSection class="next_section text-white p-5" [class.show]="isSectionVisible">
+      <h2 style="color: rgb(255, 253, 253); text-shadow: 2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black;">More About Me</h2>
+       <div class="row justify-content-center align-items-center">
       <div class="col-12 col-md-6 text-center mb-4">
         <a style="text-decoration: none;" href="https://www.cowboy-bebop.net" target="_blank" rel="noopener">
           <img id="fave_img1" src="assets/spikeGif.gif" alt="Animated GIF" class="img-fluid" style="max-width: 100%;">
@@ -28,17 +60,7 @@
           <p style="color: white;">My Favorite Movie is Drive (2011)</p>
         </a>
         </div>
-
-        <!-- Toggle Button for next section -->
-     <button class="seeMoreBtn btn btn-dark mt-4 fs-4" (click)="toggleSection(nextSection)">
-      {{ isSectionVisible ? 'Hide' : 'See Projects' }}
-    </button>
-    <!--Next Section-->
-    <div #nextSection class="next_section text-white p-5" [class.show]="isSectionVisible">
-      <h2>Current Projects</h2>
     </div>
-
-
 
 
       <!--

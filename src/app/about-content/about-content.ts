@@ -6,7 +6,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./about-content.css'],
 })
 export class AboutContent {
-  about_me = "This portfolio is made with ";
+  about_me = "Here are my latest ";
   isSectionVisible = false;
 
   @ViewChild('nextSection', { static: false }) nextSection?: ElementRef<HTMLElement>;
