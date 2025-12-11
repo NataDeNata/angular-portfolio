@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#logo">
+      <img src="assets/logo.jpg" alt="Logo" width="38" height="38" class="d-inline-block align-text-top me-2 rounded-4">
+      {{myPortfolio}}
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul style="padding-right: 10%;" class="navbar-nav mx-auto fs-5  text-center">
+        <li class="nav-item">
+         <a 
+            class="nav-link" 
+            [class.active]="activeSection === 'home'" 
+            href="#home" 
+            (click)="setActive('home')"
+            aria-current="page"
+          >Home</a>
+        </li>
+        <li class="nav-item">
+          <a 
+          class="nav-link" 
+          [class.active]="activeSection === 'about'" 
+          href="#about" 
+          (click)="setActive('about')"
+        >About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" 
+          [class.active]="activeSection === 'contact'" 
+          href="#contact"
+          (click)="setActive('contact')"
+          >Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<app-app-home-content id="home"></app-app-home-content>
+<app-about-content id="about"></app-about-content>
+<app-contact-content id="contact"></app-contact-content>
+<router-outlet></router-outlet>
